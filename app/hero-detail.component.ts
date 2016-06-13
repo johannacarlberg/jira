@@ -25,6 +25,10 @@ export class HeroDetailComponent implements OnInit {
         private routeParams: RouteParams) {
     }
 
+    goBack() {
+        window.history.back();
+    }
+
     ngOnInit() {
         let id = +this.routeParams.get('id');
         this.heroService.getHero(id)
