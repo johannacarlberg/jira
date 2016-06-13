@@ -15,11 +15,13 @@ export class Hero {
      <span class="badge">{{hero.id}}</span> {{hero.name}}
     </li>
     </ul>
-  <h2>{{hero.name}} details!</h2>
-  <div><label>id: </label>{{hero.id}}</div>
+    <div *ngIf="selectedHero">
+  <h2>{{selectedHero.name}} details!</h2>
+  <div><label>id: </label>{{selectedHero.id}}</div>
   <div>
     <label>name: </label>
-    <input [(ngModel)]="hero.name" placeholder="name">
+    <input [(ngModel)]="selectedHero.name" placeholder="name">
+  </div>
   </div>
   `,
     styles:[`
@@ -70,13 +72,20 @@ export class Hero {
     margin-right: .8em;
     border-radius: 4px 0 0 4px;
   }
-`]
+`],
+    onSelect(hero: Hero) { this.selectedHero = hero; }
+
 
 })
 export class AppComponent {
     public heroes = HEROES;
     title = 'Tour of Heroes';
+    // hero: Hero = {
+    //     id: 1,
+    //     name: 'Windstorm'
+    // };
     selectedHero: Hero;
+
 }
 
 var HEROES: Hero[] = [
