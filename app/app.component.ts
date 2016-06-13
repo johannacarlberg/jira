@@ -9,6 +9,12 @@ export class Hero {
     selector: 'my-app',
     template:`
   <h1>{{title}}</h1>
+  <h2>My Heroes</h2>
+    <ul class="heroes">
+     <li *ngFor="let hero of heroes">
+    <!-- each hero goes here -->
+    </li>
+    </ul>
   <h2>{{hero.name}} details!</h2>
   <div><label>id: </label>{{hero.id}}</div>
   <div>
