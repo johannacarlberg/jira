@@ -68,7 +68,6 @@ import { HeroDetailComponent } from './hero-detail.component';
 `],
     directives: [HeroDetailComponent]
 
-
 })
 export class AppComponent {
     public heroes = HEROES;
@@ -76,7 +75,6 @@ export class AppComponent {
     selectedHero: Hero;
     onSelect(hero: Hero) { this.selectedHero = hero; };
 }
-
 
 var HEROES: Hero[] = [
     { "id": 11, "name": "Mr. Nice" },
