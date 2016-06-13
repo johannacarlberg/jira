@@ -13,6 +13,7 @@ var router_deprecated_1 = require('@angular/router-deprecated');
 var hero_service_1 = require('./hero.service');
 var heroes_component_1 = require('./heroes.component');
 var dashboard_component_1 = require('./dashboard.component');
+var hero_detail_component_1 = require('./hero-detail.component');
 var AppComponent = (function () {
     function AppComponent() {
         this.title = 'Tour of Heroes';
@@ -37,6 +38,10 @@ var AppComponent = (function () {
                 path: '/heroes',
                 name: 'Heroes',
                 component: heroes_component_1.HeroesComponent
+            }, {
+                path: '/herodetail',
+                name: 'HeroDetail',
+                component: hero_detail_component_1.HeroDetailComponent
             }
         ]), 
         __metadata('design:paramtypes', [])
