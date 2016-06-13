@@ -17,6 +17,9 @@ var HeroDetailComponent = (function () {
         this.heroService = heroService;
         this.routeParams = routeParams;
     }
+    HeroDetailComponent.prototype.goBack = function () {
+        window.history.back();
+    };
     HeroDetailComponent.prototype.ngOnInit = function () {
         var _this = this;
         var id = +this.routeParams.get('id');
@@ -30,7 +33,7 @@ var HeroDetailComponent = (function () {
     HeroDetailComponent = __decorate([
         core_1.Component({
             selector: 'my-hero-detail',
-            template: "\n    <div *ngIf=\"hero\">\n      <h2>{{hero.name}} details!</h2>\n      <div><label>id: </label>{{hero.id}}</div>\n      <div>\n        <label>name: </label>\n        <input [(ngModel)]=\"hero.name\" placeholder=\"name\"/>\n      </div>\n    </div>\n  "
+            template: "\n    <div *ngIf=\"hero\">\n      <h2>{{hero.name}} details!</h2>\n      <div><label>id: </label>{{hero.id}}</div>\n      <div>\n        <label>name: </label>\n        <input [(ngModel)]=\"hero.name\" placeholder=\"name\"/>\n      </div>\n    </div>\n      <button (click)=\"goBack()\">Back</button>\n  "
         }), 
         __metadata('design:paramtypes', [hero_service_1.HeroService, router_deprecated_1.RouteParams])
     ], HeroDetailComponent);
