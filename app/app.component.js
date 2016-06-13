@@ -39,7 +39,7 @@ var AppComponent = (function () {
                 name: 'Heroes',
                 component: heroes_component_1.HeroesComponent
             }, {
-                path: '/herodetail',
+                path: '/detail/:id',
                 name: 'HeroDetail',
                 component: hero_detail_component_1.HeroDetailComponent
             }
