@@ -31,9 +31,10 @@ var HeroDetailComponent = (function () {
             templateUrl: 'app/hero-detail.component.html',
             styleUrls: ['app/hero-detail.component.css']
         }), 
-        __metadata('design:paramtypes', [hero_service_1.HeroService, router_deprecated_1.RouteParams])
+        __metadata('design:paramtypes', [(typeof (_a = typeof hero_service_1.HeroService !== 'undefined' && hero_service_1.HeroService) === 'function' && _a) || Object, router_deprecated_1.RouteParams])
     ], HeroDetailComponent);
     return HeroDetailComponent;
+    var _a;
 }());
 exports.HeroDetailComponent = HeroDetailComponent;
 //# sourceMappingURL=hero-detail.component.js.map
