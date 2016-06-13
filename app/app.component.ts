@@ -72,8 +72,7 @@ export class Hero {
     margin-right: .8em;
     border-radius: 4px 0 0 4px;
   }
-`],
-    onSelect(hero: Hero) { this.selectedHero = hero; }
+`]
 
 
 })
@@ -85,6 +84,7 @@ export class AppComponent {
     //     name: 'Windstorm'
     // };
     selectedHero: Hero;
+    onSelect(hero: Hero) { this.selectedHero = hero; };
 
 }
 
