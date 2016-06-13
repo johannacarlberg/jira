@@ -82,13 +82,9 @@ export class Hero {
 export class AppComponent {
     public heroes = HEROES;
     title = 'Tour of Heroes';
-    // hero: Hero = {
-    //     id: 1,
-    //     name: 'Windstorm'
-    // };
     selectedHero: Hero;
-    onSelect(hero: Hero) { this.selectedHero = hero; };
 
+    onSelect(hero: Hero) { this.selectedHero = hero; };
 }
 
 var HEROES: Hero[] = [
