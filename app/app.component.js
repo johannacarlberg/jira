@@ -14,9 +14,12 @@ var dashboard_component_1 = require('./dashboard.component');
 var heroes_component_1 = require('./heroes.component');
 var hero_detail_component_1 = require('./hero-detail.component');
 var hero_service_1 = require('./hero.service');
+var mylogger_1 = require('./mylogger');
 var AppComponent = (function () {
-    function AppComponent() {
+    function AppComponent(myLogger) {
+        this.myLogger = myLogger;
         this.title = 'Tour of Heroes';
+        this.myLogger.log("Log message!");
     }
     AppComponent = __decorate([
         core_1.Component({
@@ -45,7 +48,7 @@ var AppComponent = (function () {
                 component: heroes_component_1.HeroesComponent
             }
         ]), 
-        __metadata('design:paramtypes', [])
+        __metadata('design:paramtypes', [mylogger_1.MyLogger])
     ], AppComponent);
     return AppComponent;
 }());

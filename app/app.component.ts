@@ -4,6 +4,8 @@ import { DashboardComponent }  from './dashboard.component';
 import { HeroesComponent }     from './heroes.component';
 import { HeroDetailComponent } from './hero-detail.component';
 import { HeroService }         from './hero.service';
+import {MyLogger} from './mylogger'
+
 
 @Component({
     selector: 'my-app',
@@ -42,4 +44,7 @@ import { HeroService }         from './hero.service';
 
 export class AppComponent {
     title = 'Tour of Heroes';
+    constructor(private myLogger:MyLogger) {
+        this.myLogger.log("Log message!");
+    }
 }
