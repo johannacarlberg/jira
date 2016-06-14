@@ -7,7 +7,11 @@
 
 
 ## TO CONNECT TO A RUNNING JIRA SERVER, DO:
-## - curl -u admin:admin http://localhost:8080/jira/rest/api/2/issue/MKY-1
+## - curl -u admin:admin http://localhost:8080/jira/rest/api/2/issue/JIRA-1
 ## THIS WILL GIVE A 401 UNAUTHORIZED, SORT OUT AUTHENTICATION
+
+ AUTHENTICATION
+
+ ## curl -D- -u username:password -X GET -H "Content-Type: application/json" http://localhost:8080/rest/api/2/issue/JIRA-1
 
 
