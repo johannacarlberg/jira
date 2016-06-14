@@ -7,10 +7,12 @@ var in_memory_data_service_1 = require('./in-memory-data.service');
 // The usual bootstrapping imports
 var platform_browser_dynamic_1 = require('@angular/platform-browser-dynamic');
 var http_2 = require('@angular/http');
+var mylogger_1 = require('./mylogger');
 var app_component_1 = require('./app.component');
 platform_browser_dynamic_1.bootstrap(app_component_1.AppComponent, [
     http_2.HTTP_PROVIDERS,
     core_1.provide(http_1.XHRBackend, { useClass: angular2_in_memory_web_api_1.InMemoryBackendService }),
-    core_1.provide(angular2_in_memory_web_api_1.SEED_DATA, { useClass: in_memory_data_service_1.InMemoryDataService }) // in-mem server data
+    core_1.provide(angular2_in_memory_web_api_1.SEED_DATA, { useClass: in_memory_data_service_1.InMemoryDataService }),
+    mylogger_1.MyLogger
 ]);
 //# sourceMappingURL=main.js.map
