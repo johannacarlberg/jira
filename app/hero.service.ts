@@ -2,17 +2,28 @@ import { Injectable }    from '@angular/core';
 import { Headers, Http } from '@angular/http';
 import 'rxjs/add/operator/toPromise';
 import { Hero } from './hero';
+import { MyLogger } from './mylogger'
 
 @Injectable()
 export class HeroService {
     private heroesUrl = 'app/heroes';  // URL to web api
-    constructor(private http: Http) { }
+    constructor(private http: Http, private myLogger:MyLogger) {
+        this.myLogger.log("WAAAAA message!");
+    }
     getHeroes(): Promise<Hero[]> {
         return this.http.get(this.heroesUrl)
             .toPromise()
             .then(response => response.json().data)
             .catch(this.handleError);
     }
+
+    getHeroes(): Promise<Hero[]> {
+        return this.http.get(this.heroesUrl)
+            .toPromise()
+            .then(response => response.json().data)
+            .catch(this.handleError);
+    }
+    
     getHero(id: number) {
         return this.getHeroes()
             .then(heroes => heroes.filter(hero => hero.id === id)[0]);

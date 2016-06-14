@@ -12,11 +12,15 @@ var core_1 = require('@angular/core');
 var router_deprecated_1 = require('@angular/router-deprecated');
 var hero_service_1 = require('./hero.service');
 var hero_detail_component_1 = require('./hero-detail.component');
+var mylogger_1 = require('./mylogger');
 var HeroesComponent = (function () {
-    function HeroesComponent(router, heroService) {
+    function HeroesComponent(router, heroService, myLogger) {
         this.router = router;
         this.heroService = heroService;
+        this.myLogger = myLogger;
         this.addingHero = false;
+        this.stuff = null;
+        this.myLogger.log("IN HERE !");
     }
     HeroesComponent.prototype.getHeroes = function () {
         var _this = this;
@@ -65,7 +69,7 @@ var HeroesComponent = (function () {
             styleUrls: ['app/heroes.component.css'],
             directives: [hero_detail_component_1.HeroDetailComponent]
         }), 
-        __metadata('design:paramtypes', [router_deprecated_1.Router, hero_service_1.HeroService])
+        __metadata('design:paramtypes', [router_deprecated_1.Router, hero_service_1.HeroService, mylogger_1.MyLogger])
     ], HeroesComponent);
     return HeroesComponent;
 }());

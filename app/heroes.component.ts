@@ -3,6 +3,7 @@ import { Router }            from '@angular/router-deprecated';
 import { Hero }                from './hero';
 import { HeroService }         from './hero.service';
 import { HeroDetailComponent } from './hero-detail.component';
+import { MyLogger } from './mylogger'
 
 @Component({
     selector: 'my-heroes',
@@ -14,10 +15,14 @@ export class HeroesComponent implements OnInit {
     heroes: Hero[];
     selectedHero: Hero;
     addingHero = false;
+    stuff = null;
     error: any;
     constructor(
         private router: Router,
-        private heroService: HeroService) { }
+        private heroService: HeroService,
+        private myLogger:MyLogger ) {
+        this.myLogger.log("IN HERE !");
+    }
     getHeroes() {
         this.heroService
             .getHeroes()
